@@ -1,0 +1,29 @@
+.bg{
+    font-family: "buxton-sketch";
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    padding-top: 4%;
+}
+.bg::before{
+    /* content: "Frontend Development"; */
+    display: block;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 20px;
+}
+body{
+    font-family: "buxton-sketch";   
+}
+.img1{
+    border: 3px solid #D95A2B	;
+    border-radius: 20px;
+}
+.btn{
+    background-color: #D95A2B;
+}
+.bttn1{
+    margin-left: 35px;
+}

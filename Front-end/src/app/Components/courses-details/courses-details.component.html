@@ -1,0 +1,77 @@
+<div class="course-details-page min-vh-100" [ngStyle]="{'background-image': 'url(' + background_img_url + ')'}">
+    <div class="layer min-vh-100">
+        <h1 class="text-center text-white pt-5 mt-5  ">{{course.name}}</h1>
+
+        <!-- ***********first section********** -->
+        <div class="container mb-5">
+            <div class="row">
+                 <!-- ***********left side********** -->
+                <div class="col-5 pt-4">
+                    <img src="assets/themes/{{theme['name']}}/courseDetails/1.png" class="w-100" style="height:400px" alt=""/>
+                </div>
+                   <!-- ***********right side********** -->
+                <div class="col-7">
+                    <div class="container-fluid pt-5 mt-5">
+                        <div class="row">
+                            <div class="col-6 text-white fs-3 ps-5">
+                                <p>Level: {{course.level}}</p>
+                                <p>Duration: {{course.duration}}</p>
+                                <p>Rating: {{course.rating}}<!-- <i class="bi bi-star-fill me-3"></i>
+                                    <i class="bi bi-star-fill me-3"></i>
+                                    <i class="bi bi-star-fill me-3"></i>
+                                    <i class="bi bi-star-fill me-3"></i>
+                                    <i class="bi bi-star-half me-3"></i> -->
+                                </p>
+                                <p>Price: {{course.price}}</p>
+                                <p>Finish the course to get your magical certificate!</p>
+                            </div>
+                            <div class="col-6 sec1-coursePic">
+                                <img src="{{course_img}}" [ngStyle]="{'border': theme['border']}" class="w-100 rounded-4" alt=""/>
+                                <!-- <button class="d-block text-white ms-auto me-auto mt-3 rounded-5 pt-2 pb-2 ps-4 pe-4 fs-6 fw-bold ">Book Course</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <!-- ***********second section (Description&syllabus)********** -->
+         <div class="container pt-5 mt-5">
+            <div class="row text-white">
+               <div class="col-7 description fs-4">
+                <h3>Description:</h3>
+                <p class="m-0 p-0">
+                    {{course.description}}
+                    <!-- Bad guys are coming for info and data! Our hero needs great preperation 
+                    to face them. We have been looking for ahero with special skills
+                    to join this fight, and you have been chosen! -->
+                </p>
+                <!-- <p class="m-0 p-0">Welcome to security course!</p>
+                <p class="m-0 p-0">
+                    Our villians call themselves 'Hackers', their target is to steal important data 
+                    from devices through viruses and tricks.
+                    Together, we will grow your skills and teach you how to stand for their tricks
+                </p>
+                <p class="m-0 p-0">We are counting on you</p> -->
+                <h3 class="mt-5">Syllabus:</h3>
+                 <ul class="list-unstyled mb-5 pb-0">
+                    <li class="m-2" *ngFor="let title of course.Syllabus">- {{title}}</li>
+                 </ul>
+                 <button class="d-block text-white ms-auto me-auto mt-5 rounded-5 pt-2 pb-2  fs-6 fw-bold " [ngStyle]="{'background-color': theme['color']}">Book Course</button> 
+               </div>
+               <div class="col-5">
+                <div class="instrcutor-info text-center w-75 rounded-5 position-relative p-4" [ngStyle]="{'background-color': theme['color']}">
+                    <h4>Know your instructor!</h4>
+                    <img src={{instructor.profile_Img}} class="h-25 w-50 mb-2 rounded-3" alt=""/>
+                    <h3>{{instructor.name}}</h3>
+                    <h5>{{instructor.description}}</h5>
+                    <h5>Teaching {{instructor.courses_Enrolled}} Courses in Magicode</h5>
+                </div>
+                <img src="assets/themes/{{theme['name']}}/courseDetails/2.png" class="w-75 float-end" alt=""/>
+
+               </div>
+            </div>
+         </div>
+
+    </div>
+</div>

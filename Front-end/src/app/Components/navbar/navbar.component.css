@@ -1,0 +1,14 @@
+a {
+    color: white;
+    font-family: buxton-sketch;
+    font-size: x-large;
+    
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .show > .nav-link{
+    color: #508BBF !important;
+}
+
+a:hover{
+    color: #508BBF;
+}

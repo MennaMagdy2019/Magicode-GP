@@ -1,0 +1,101 @@
+<div class="signup-page position-relative min-vh-100" [ngStyle]="{'background-image': 'url(' + background_img_url + ')'}">
+    <div class="background-layer min-vh-100 ">
+      <img class=" position-absolute bottom-0 end-0 h-75" src="assets/themes/{{theme['name']}}/signup.jpg" alt=""/>
+      <h1  class="pt-5 text-white text-center mt-5">Sign up</h1>
+  
+    <!-- ************form************ -->
+      <div *ngIf="!success; else elseBlock" class=" pt-5 form-container mt-5">
+        <form class="w-50 d-flex flex-wrap justify-content-evenly m-auto pt-5 rounded-5" [formGroup]="registerForm" (ngSubmit)="submitForm()" [ngStyle]="{'border': theme['border']}">
+  
+          <!-- ************firstname field************ -->
+          <div class=" w-50  w-sm-100">
+            <div class="w-75 ms-auto me-auto mt-3">
+              <label class="form-label d-block" for="firstname">First Name</label>
+              <input class="w-100 rounded-5 m-auto" id="firstname" type="text" formControlName="first_name" [ngStyle]="{'border-color':registerForm.controls['first_name'].errors && registerForm.controls['first_name'].touched?'red':theme['color']}">
+              <div *ngIf="registerForm.controls['first_name'].errors && registerForm.controls['first_name'].touched" class="text-danger fs-6">
+                <p *ngIf="registerForm.controls['first_name'].errors?.['required']">First name is required</p>
+                <p *ngIf="registerForm.controls['first_name'].errors?.['minlength']">Minimum length should be 3</p>
+                <p *ngIf="registerForm.controls['first_name'].errors?.['maxlength']">Maximum length should be 10</p>
+              </div>
+            </div>
+          </div>
+  
+           <!-- ************lastname field************ -->
+          <div class="w-50 w-sm-100">
+            <div class="w-75 ms-auto me-auto mt-3 ">
+              <label class="form-label d-block" for="lastname">Last Name</label>
+              <input class="w-100 rounded-5 m-auto" id="lastname" type="text" [ngStyle]="{'border-color':registerForm.controls['last_name'].errors && registerForm.controls['last_name'].touched?'red':theme['color']}" formControlName="last_name">
+              <div *ngIf="registerForm.controls['last_name'].errors && registerForm.controls['last_name'].touched" class="text-danger fs-6">
+                <p *ngIf="registerForm.controls['last_name'].errors?.['required']">last name is required</p>
+                <p *ngIf="registerForm.controls['last_name'].errors?.['minlength']">Minimum length should be 3</p>
+                <p *ngIf="registerForm.controls['last_name'].errors?.['maxlength']">Maximum length should be 10</p>
+              </div>
+            </div>
+          </div>
+  
+           <!-- ************email field************ -->
+          <div class="w-50">
+            <div class="w-75 ms-auto me-auto mt-3 w-sm-100">
+              <label class="form-label d-block" for="email">Email</label>
+              <input class="w-100 rounded-5 m-auto" id="email" type="email" formControlName="email" [ngStyle]="{'border-color':registerForm.controls['email'].errors && registerForm.controls['email'].touched?'red':theme['color']}">
+              <div *ngIf="registerForm.controls['email'].errors && registerForm.controls['email'].touched" class="text-danger fs-6">
+                <p  *ngIf="registerForm.controls['email'].errors?.['required']">Email is required</p>
+                <p *ngIf="registerForm.controls['email'].errors?.['pattern']">should be valid email</p>
+              </div>
+            </div>
+          </div>
+  
+           <!-- ************password field************ -->
+          <div class="w-50">
+            <div class="w-75 ms-auto me-auto mt-3 w-sm-100">
+              <label class="form-label d-block" for="password">Password</label>
+              <input class="w-100 rounded-5 m-auto" id="password" type="password" formControlName="password" [ngStyle]="{'border-color':registerForm.controls['password'].errors && registerForm.controls['password'].touched?'red':theme['color']}">
+              <div *ngIf="registerForm.controls['password'].errors && registerForm.controls['password'].touched" class="text-danger fs-6"> 
+                <p *ngIf="registerForm.controls['password'].errors?.['required']">Password is required</p>
+                <p *ngIf="registerForm.controls['password'].errors?.['pattern']"> Minimum eight characters, at least one letter and one number</p>
+              </div>
+            </div>
+          </div>
+  
+           <!-- ************confirm password field************ -->
+          <div class="w-50">
+            <div class="w-75 ms-auto me-auto mt-3 w-sm-100">
+              <label class="form-label d-block" for="confirmPassword">Confirm Password</label>
+              <input class="w-100 rounded-5 m-auto" id="confirmPassword" type="password" formControlName="confirm_password" [ngStyle]="{'border-color':registerForm.errors?.['passwordMismatchError'] && registerForm.controls['confirm_password'].touched?'red':theme['color']}">
+              <div *ngIf="registerForm.errors?.['passwordMismatchError'] && registerForm.controls['confirm_password'].touched" class="text-danger fs-6"> Password does not match
+              </div>
+            </div>
+          </div>
+           
+          <!-- ************email Already Exist************ -->
+          <div *ngIf="!valid" class="alert alert-danger w-100 m-auto text-center " role="alert">
+            This email Already Exist
+           </div>
+          <!-- ************SignUp Successfully************ -->
+           <!-- <div *ngIf="success" class="alert alert-success w-100 m-auto text-center " role="alert">
+           SignUp Successfully
+           </div> -->
+  
+            <!-- ************submit button************ -->
+          <div class="w-100 text-center mt-4 pb-3">
+            <button [disabled]="registerForm.invalid" class="ps-4 pe-4 pt-2 pb-2 rounded-5 fw-bold" type="submit"[style.opacity]="(registerForm.invalid)?'0.5':'1'" [ngStyle]="{'background-color': theme['color']}">
+              Submit
+            </button>
+           </div>
+          </form>
+        </div>
+
+       <!-- ************div which appears during signup successfully************ -->
+      <ng-template #elseBlock>
+        <div class="w-100 d-flex justify-content-center text-center min-vh-100 pt-5 mt-5" >
+          <div class="w-40 fs-1 rounded-5 d-flex align-items-center justify-content-center div-success" style="border: 4px solid  rgb(6, 119, 6) ;">
+           <div>
+            <i class="bi bi-check-circle-fill" style="color: rgb(6, 119, 6);"></i>
+            <p>Signup Successfully</p>
+            <button class="btn m-5 p-2 fs-3" style="background-color: rgb(6, 119, 6); color: white;" (click)="continue()">Continue</button>
+           </div>
+          </div>
+         </div>
+      </ng-template>
+      </div>
+    </div>  

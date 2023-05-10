@@ -1,0 +1,16 @@
+<div class="container-fluid p-0 background_image" [ngStyle]="{'background-image': 'url('+ background_img_url +')'}">
+    <div class="row container-fluid w-100 h-100 m-0 black_layer position-relative">
+
+        <h2 class="mt-7 text-center text-light font-buxton-sketch">Every journey starts with a course!</h2>
+
+        <div class="row container d-flex position-absolute bottom-0 start-0 col-7 h-75 overflow-y-auto ms-2 flip">
+            <div class="w-40 h-55 mx-4 my-3 px-2 rounded-4 d-flex flex-column align-items-center justify-content-center" [ngStyle]="{'border': theme['border'], 'background-color': theme['background'], 'cursor':'pointer'}" *ngFor="let course of courses" (click)="view_course_details(course._id)">
+                <img class="w-100 h-85" src={{course.theme_img}} alt="">
+                <h4 class="font-comic-sans fw-bold" [ngStyle]="{'color': theme['textColor']}">{{course.name}}</h4>
+            </div>
+        </div>
+
+        <img class="row col-5 h-85 me-0 position-absolute bottom-0 end-0" src="assets/themes/{{theme['name']}}/courses.jpg" alt="">
+
+    </div>
+</div>

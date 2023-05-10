@@ -1,0 +1,32 @@
+.loginPage
+{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family:"buxton-sketch" ;
+    box-sizing: border-box;
+}
+
+.backgroundLayer
+{
+    background-color: rgba(0,0,0,0.6);
+}
+
+ form
+{
+    /* border: 4px solid #D95A2B; */
+    background-color: rgba(255,255,255,0.9);
+    /* z-index: 9999; */
+} 
+
+ form input
+{
+    border:2px solid rgb(217, 90, 43) ;
+}
+
+form button
+{
+    /* background-color: #D95A2B; */
+    color: white;
+    font-family: "comic-sans";
+}

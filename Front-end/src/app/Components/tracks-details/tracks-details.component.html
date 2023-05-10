@@ -1,0 +1,85 @@
+<div  class="bg text-white" [ngStyle]="{'background-image': 'url(' + background_img_url + ')'}">
+    <!-- <h1 class="text-center ">Frontend Development</h1> -->
+    <div class="container-fluid pt-5"  style="background-color: rgba(1, 1, 1, 0.5);">
+    <h1 class="text-center">{{track.name}}</h1>
+
+      <div class="row" style="margin-top: -3%;">
+        <div class="col-lg-3 col-sm-12 ms-lg-3" style="margin-top: 120px">
+          <img src={{track_img}} class="w-100 img1" [ngStyle]="{'border': theme['border']}" alt=""/>
+
+        </div>
+        <div class="col-lg-3 col-sm-12 p-2 " style="margin-top: 140px">
+          <h2>Number of courses: {{courses_num}}</h2>
+          <h2>Price: {{track.price}}</h2>
+          <h2>Finish the track to get</h2>
+          <h2>your magical certificate!</h2>
+        </div>
+        <div class="col-lg-5 col-sm-12 align-self-end">
+          <img src="assets/themes/{{theme['name']}}/track_details_1.png" class="w-100 h-75" alt=""/>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-lg-10 offset-lg-1">
+            <h2>Description:</h2>
+            <h2 class="mx-lg-5">
+              {{track.description}}
+              <!-- Every hero, queen, or character needs a place to live, and this place
+              needs to be built based on a special -->
+            </h2>
+            <!-- <h2 >
+              design! it takes a creative builder and designer to build a home for
+              our beloved characters, and no one would do
+            </h2>
+            <h2>a great job better then you!</h2>
+            <h2 class="mx-lg-5">welcome to frontend development track!</h2>
+            <h2 class="mx-lg-5">
+              where we build this lovely home "website" using cool tools and
+              technologies. Together, we will go from
+            </h2>
+            <h2>design to having our website ready to go!</h2>
+            <h2 class="mx-5">we are counting on you.</h2> -->
+          </div>
+        </div>
+        <div class="row align-items-end ms-5">
+          <div class="col-lg-4 align-self-center"style="margin-bottom:400 px" >
+              <h2 class="mx-2">Courses: </h2>
+                  <h4 class="mx-5" *ngFor="let course of track.courses">- {{course.name}}</h4>
+                      
+          <button class="btn btn-danger rounded-pill mt-4  w-100 p-2 text-center offset-lg-2" [ngStyle]="{'background-color': theme['color']}" >
+              Start Track
+            </button>
+          </div>
+    
+       
+          <div class="col-lg-5 offset-lg-3 ">
+              <img src="assets/themes/{{theme['name']}}/track_details_2.png" class="w-75  h-25  " alt=""/>
+          </div>
+            </div>
+  </div>
+    </div>
+
+    <!-- <div class="container-fluid">
+     
+    </div> -->
+    <!-- <div class="row">
+      <div class="col-lg-6 col-sm-12 ms-4" style="margin-top: 70px">
+        <div class="col-lg-6 col-sm-12 p-2" style="margin-top: 70px">
+          <h3>Courses: </h3>
+          <h3 class="mx-5">-HTML5</h3>
+          <h3 class="mx-5">-CSS3</h3>
+          <h3 class="mx-5">-JavaScript</h3>
+          <h3 class="mx-5">-Angular</h3>
+        </div>
+        <button class="btn btn-danger rounded-pill mx-5 mt-3 w-75 mx-5">
+          Start Track
+        </button>
+      </div>
+  
+      <div class="col-lg-5 col-sm-12 mx-4">
+        <img src="assets/images/track_details_2.png" style="width: 400px" />
+      </div>
+    </div> -->
+  <!-- <div class="container-fluid">
+     
+  </div> -->
+  

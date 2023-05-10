@@ -1,0 +1,44 @@
+@font-face {
+    font-family: "buxton-sketch";
+    src: url("./assets/fonts/buxton-sketch.otf");
+}
+
+@font-face {
+    font-family: "comic-sans";
+    src: url("./assets/fonts/ComicSansMS3.ttf");
+}
+
+.font-buxton-sketch {
+    font-family: "buxton-sketch" !important;
+}
+
+.font-comic-sans {
+    font-family: "comic-sans" !important;
+}
+
+.w-40 {
+    width: 40% !important;
+}
+
+.h-55 {
+    height: 55% !important;
+}
+
+.h-85 {
+    height: 85% !important;
+}
+
+.mt-7 {
+    margin-top: 7% !important;
+}
+
+.background_image {
+    height: 100vh; 
+    background-size: 100% 100%; 
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.black_layer {
+    background-color: rgba(1, 1, 1, 0.6);
+}

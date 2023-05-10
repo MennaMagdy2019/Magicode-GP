@@ -1,0 +1,87 @@
+<div class="loginPage min-vh-100 position-relative" [ngStyle]="{'background-image': 'url(' + background_img_url + ')'}">
+    <div class="backgroundLayer min-vh-100">
+      <img class="position-absolute bottom-0 start-0 h-75" src="assets/themes/{{theme['name']}}/login.jpg" alt="">
+      <h1 class="pt-5 text-white text-center mt-5">Login</h1>
+      <!-- ************form************ -->
+     <div class="d-flex pt-5 justify-content-center align-items-center">
+      <form [formGroup]="loginForm" (ngSubmit)="submitForm()" class="w-25 rounded-5 "  [ngStyle]="{'border': theme['border']}">
+      
+        <!-- ************email field************ -->
+       <div class=" w-50 m-auto ">
+        <label class="d-block mt-5 fs-4" for="email">Email</label>
+        <input class="w-100 rounded-5" id="email" type="email" formControlName="email" [ngStyle]="{'border-color': loginForm.controls['email'].errors && loginForm.controls['email'].touched?'red':theme['color']}">
+        <div *ngIf="loginForm.controls['email'].errors && loginForm.controls['email'].touched" class="text-danger fs-6">
+          <p *ngIf="loginForm.controls['email'].errors?.['required']">Email is required</p>
+          <p *ngIf="loginForm.controls['email'].errors?.['pattern']">should be valid email</p>
+        </div>
+       </div>
+  
+        <!-- ************password field************ -->
+        <div class=" w-50 m-auto">
+          <label class="d-block mt-4 fs-4" for="password">Password</label>
+          <input class="w-100 rounded-5" id="password" type="password"  formControlName="password" [ngStyle]="{'border-color':loginForm.controls['password'].errors && loginForm.controls['password'].touched?'red':theme['color']}">
+          <div *ngIf="loginForm.controls['password'].errors && loginForm.controls['password'].touched" class="text-danger fs-6"> 
+            <p *ngIf="loginForm.controls['password'].errors?.['required']">Password is required</p>
+            <p *ngIf="loginForm.controls['password'].errors?.['pattern']"> Minimum eight characters, at least one letter and one number</p>
+          </div>
+         </div>
+
+          <!-- ************invalid email or password************ -->
+          <div *ngIf="!valid" class="alert alert-danger w-50 m-auto" role="alert">
+           Invalid Email or password 
+          </div>
+
+
+  
+         <!-- ************login button************ -->
+         <div class="w-100 text-center mt-4 pb-4">
+          <button [disabled]="loginForm.invalid" class="ps-4 pe-4 pt-1 pb-1 rounded-5 fw-bold m-auto" type="submit" [style.opacity]="(loginForm.invalid)?'0.5':'1'" [ngStyle]="{'background-color': theme['color']}">Login</button>
+         </div>
+     </form>
+     </div>
+  
+    </div>
+  
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- <form>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form> -->
+  <!-- <div class="layer">
+      <div class="center">
+          <div class=" w-50 text-center">
+              <h1>login</h1>
+              <form class=" ">
+              <div class="w-25 inputbox ms-auto me-auto ">
+                  <input class=" " type="text" required="required">
+                  <span>Email</span>
+              </div>
+              <div class=" w-25 ms-auto me-auto inputbox">
+                  <input type="text" required="required">
+                  <span>Password</span>
+              </div>
+              <button class="inputbox">Sumbit</button>
+              <div>
+                 
+              </div>
+              </form>
+          </div>
+      </div>
+  </div> -->

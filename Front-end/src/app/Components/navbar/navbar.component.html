@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color:#5B5252 ;color:white;">
+    <div class="container-fluid">
+      <a class="navbar-brand fs-2" routerLink="home">Magicode</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+          <li class="nav-item">
+            <a class="nav-link" routerLink="home" routerLinkActive="active"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="courses" routerLinkActive="active"
+              >Courses</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="tracks" routerLinkActive="active"
+              >Tracks</a
+            >
+          </li>
+        </ul>
+
+        <!----------------------------- themes buttons ----------------------------->
+       
+        <img class="btn py-0 mx-2" style="height: 60px; width: 90px;" *ngFor="let theme of themes_names" (click)="setTheme(theme)" alt="" src="assets/icons/{{theme}}.ico"/> 
+
+        <!-------------------------------------------------------------------------->
+
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li *ngIf="!isLogegedIn" class="nav-item">
+            <a class="nav-link" routerLink="register" routerLinkActive="active"
+              >Sign up</a
+            >
+          </li>
+          <li *ngIf="!isLogegedIn" class="nav-item">
+            <a class="nav-link" routerLink="login" routerLinkActive="active"
+            >Login</a
+            >
+          </li>
+          <li *ngIf="isLogegedIn" class="nav-item">
+            <a class="nav-link" (click)="logout()" routerLinkActive="active"
+              >Logout</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

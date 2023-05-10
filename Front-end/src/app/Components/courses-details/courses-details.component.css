@@ -1,0 +1,39 @@
+.course-details-page
+{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family:"buxton-sketch" ;
+    box-sizing: border-box;
+}
+.layer
+{
+    background-color: rgba(0,0,0,0.6);
+}
+.sec1-coursePic img
+{
+    height: 300px;
+    /* border: 4px solid rgb(217, 90, 43); */
+}
+.sec1-coursePic button,.description button
+{
+  background-color:rgb(217, 90, 43) ;
+  border: none;
+  font-family: "comic-sans";
+}
+.description p,li
+{
+    text-indent: 50px;
+}
+
+.instrcutor-info
+{
+    /* background-color:rgb(217, 90, 43) ; */
+    position: relative;
+    left: 130px;
+}
+.description button
+{
+    padding-left: 100px;
+    padding-right: 100px;
+}
