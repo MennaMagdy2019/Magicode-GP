@@ -12,6 +12,9 @@
 <h1>⚡ Live Website<h1>
 
 [Magicode]https://magicode.onrender.com/home
+Note: You should run back-end local using npm i
+https://github.com/MennaMagdy2019/Magicode-GP/tree/main/Back-end
+
 
 <h1>⚡ Demo</h1>
 
