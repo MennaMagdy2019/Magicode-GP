@@ -1,26 +1,38 @@
 # Magicode
-<h3>Website for teaching kids programming skills and mixing it with fun through:</h3> 
+
+### Website for teaching kids programming skills and mixing it with fun through:
+
 * Different themes to choose from them
-<br>
+
 * Short videos and simple explanation
-<br>
-* Observe progress through dashboard 
-<br>
+
+* Observe progress through dashboard
+
 * Certificate and reward by the end of the course
+
 <br>
-<br>
-<h1>⚡ Live Website<h1>
 
-[Magicode]https://magicode.onrender.com/home
-Note: You should run back-end local using npm i
-https://github.com/MennaMagdy2019/Magicode-GP/tree/main/Back-end
+## ⚡Live Website
 
+[ 🔗 Magicode Live Website](https://magicode.onrender.com/home)
 
-<h1>⚡ Demo</h1>
+## ⚡How to run the website locally
+### You should run back-end local using 
 
-https://github.com/MennaMagdy2019/Magicode-GP/assets/50016070/d2884d3c-5dc2-4910-876e-af1190f98e23
+```bash
+npm i
+node app.js
+```
 
-<h1>⚡ Technologies we used </h1>
+from this path:
+[Backend path](https://github.com/MennaMagdy2019/Magicode-GP/tree/main/Back-end)
+
+## ⚡Demo Video
+
+[ 📽️ Watch the video](https://github.com/MennaMagdy2019/Magicode-GP/assets/50016070/d2884d3c-5dc2-4910-876e-af1190f98e23)
+
+## ⚡Technologies we used
+
 <div style="margin:auto;text-align:center">
 <p align="center">
 
@@ -33,9 +45,8 @@ https://github.com/MennaMagdy2019/Magicode-GP/assets/50016070/d2884d3c-5dc2-4910
   </p>
 </div>
 
-<h1>🤝 Contributers</h1>
+## 🤝 Contributers
 <br>
-
 
 <div style="margin:auto; text-align:center">
 <a href="https://github.com/MennaMagdy2019" style="border-radius:50%; margin-right:10px;"><img src="https://avatars.githubusercontent.com/u/50016070?s=96&v=4" width="50px" height="50px" style="border-radius:50px" alt="img"></a>
@@ -43,13 +54,3 @@ https://github.com/MennaMagdy2019/Magicode-GP/assets/50016070/d2884d3c-5dc2-4910
 <a href="https://github.com/Hadeer-Elsayed" style="border-radius:50%; margin-right:10px;"><img src="https://avatars.githubusercontent.com/u/119134893?v=4" width="50px" height="50px" style="border-radius:100%" alt="img"></a>
 <a href="https://github.com/eng-AhmedMahmoud" style="border-radius:50%; margin-right:10px;"><img src="https://avatars.githubusercontent.com/u/78612108?v=4" width="50px" height="50px" style="border-radius:100%" alt="img"></a>
 </div>
-
-
-
-
- 
-
-
-
-
-
